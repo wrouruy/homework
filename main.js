@@ -20,7 +20,7 @@ if (n < 0) {
 }  
 function uuu(){
 
-    let m = prompt('ведіть вік для реєстрації')
+    let m = prompt('введіть вік для реєстрації')
 
     if (m > 18){
         var url = "https://github.com/wrouruy/homework";
