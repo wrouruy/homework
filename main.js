@@ -22,9 +22,11 @@ function uuu(){
 
     let m = prompt('введіть вік для реєстрації')
 
-    if (m > 18){
+    if (m >= 18){
         var url = "https://github.com/wrouruy/homework";
         window.location.assign(url);
-    }
+    } else if (m < 18){
+      alert('вхід не виконано')
+     }
 }
  
