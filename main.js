@@ -16,11 +16,9 @@ function submit() {
 
     let foundUser = user.find(item => item.username === inputValueUsername && item.login === inputValueLogin && item.password === inputValuePassword);
 
-    if (foundUser) {
-        console.log('Вхід виконано');
-        // Переадресація на іншу сторінку (замість console.log)
+    if (foundUser) {
         window.location.href = 'https://github.com/wrouruy/homework';
     } else {
-        console.log('Неправильне ім\'я, логін або пароль');
+        alert('Неправильне імя, логін або пароль');
     }
 }
