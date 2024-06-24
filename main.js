@@ -53,16 +53,25 @@ $('.sendExploes').click(function() {
         $('#textP').text('Ця функція наразі недоступна :(')
     }
 })
+document.body.onkeydown = function (e) {
+    if(e.keyCode == 13){
+        sendEnter()
+    }
+}
 
 $('#send').click(function () {
+    sendEnter()
+})    
 
-
-    $('.asistantMessage').append(`<div class='subscriberMessageItem'><p style='margin-left: 10px'>${$('#message').val()}
-    <span class="miniText">${new Date().getHours()}:${new Date().getMinutes()}</span><p>
-    </div>`);
-    $('.asistantMessage').append(`<p style="color: red; margin-left: 10px">помилка <span style="font-weight: 700; color: red">0052</span>: IQ олега не витримало такого напору.</p>`);
-    message.value = ''
-})
+function sendEnter(){
+    if(!message.value == ''){
+        $('.asistantMessage').append(`<div class='subscriberMessageItem'><p style='margin-left: 10px'>${$('#message').val()}
+        <span class="miniText">${new Date().getHours()}:${new Date().getMinutes()}</span><p>
+        </div>`);
+        $('.asistantMessage').append(`<p style="color: red; margin-left: 10px">помилка <span style="font-weight: 700; color: red">0052</span>: IQ олега не витримало такого напору.</p>`);
+        message.value = ''
+    }
+}
 
 $('.wrap').click(function() {
     $('.asistantPreview').slideUp(300);
@@ -75,19 +84,23 @@ $('.wrap').click(function() {
     rightBtn = 0
 })
 
-$('#goTelegram').click(function() {
-    window.location.href = 'https://t.me/letfin2';
-});
-
-$('#goNumber').click(function () {
-    $('.asistantNumber').slideToggle(300);
-})
-
 $('#goTalk').click(function() {
     $('.asistantMessage').slideToggle(300);
 });
 
+$('#goNumber').click(function () {
+    $('.asistantNumber').slideToggle(300);
+    $('.alertError').fadeOut(300);
+})
 
-// let currentTime = new Date();
+$('#goTelegram').click(function() {
+    alert('олег не інтернет герой')
+});
 
-// console.log(currentTime);
+$('#goMessanger').click(function() {
+    alert('олег не інтернет герой')
+});
+
+$('#goInstagram').click(function() {
+    alert('олег не інтернет герой')
+});
