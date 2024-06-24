@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework</title>
-    <link rel="icon" href="favicon.png">
-    <style>
-        .wrap{
-            width: 100%;
-            height: 80vh;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        button{
-            width: 550px;
-            height: 70px;
-            background-color: black;
-            display: flex;
-            font-size: 150%;
-            border: 1px solid transparent;
-            border-radius: 7px;
-            color: white;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            font-weight: 800;
-        }
-        button:hover{
-            margin-top: 0.1%;
-            background-color: rgb(36, 36, 36);
-        }
-    </style>
+    <title>asistant</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css' integrity='sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==' crossorigin='anonymous'/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
 </head>
 <body>
-    <script src="./main.js"></script>
-    <div class="wrap">
-        <button type="button" onclick="button()">відкрити консоль через кнопку...</button>
+    <div class="asistantButton"></div>
+    <div class="asistantNumber">
+        <p style="margin-top: 10px;">+380 52 228 1488</p>
+        <div class="lineBtn">
+            <div class="call">подзвонити</div>
+            <div class="sendExploes">кинути спам бомбу</div>
+        </div>
     </div>
+    <div class="asistantMessage">
+        <div class="sendContainer">
+            <input type="text" id="message">
+            <button id="send"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="alertError">
+        <p style="font-size: 110%; font-weight: 600;" id="textP"></p>
+    </div>
+    <div class="asistantPreview">
+        <div class="previewItem" id="goTalk"><i class="fa-regular fa-message"></i>Почати розмову</div>
+        <div class="previewItem" id="goNumber"><i class="fa-solid fa-phone"></i>Номер телефону</div>
+        <div class="previewItem" id="goTelegram"><i class="fa-brands fa-telegram"></i> Telegram</div>
+        <div class="previewItem"><i class="fa-brands fa-facebook-messenger"></i> Messanger</div>
+        <div class="previewItem"><i class="fa-brands fa-instagram"></i> Instagram</div>
+    </div>
+
+    
+    <div class="wrap">
+
+        
+
+        <div class="messageContainer"></div>
+
+        
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
